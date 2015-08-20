@@ -1,0 +1,153 @@
+﻿@model IEnumerable<GoodSamaritan.Models.Smart.Smart>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BadDate.BadDateReportValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityAssault.CityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityResidence.CityResName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrugAssault.DrugFacilitatedAssaultValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evidence.EvidenceStoredValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exploitation.SexWorkExploitationValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIVMeds.HIVMedsValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HospitalAttended.HospitalAttName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicalOnly.MedicalOnlyValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MultiPerp.MultiplePerpetratorValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliceAttendence.PoliceAttendanceValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliceReported.PoliceReportedValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferCBVS.ReferCBVSValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferringHospital.HospitalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SocialWorkAttendence.SocialWorkAttendanceValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThirdParty.ThirdPartyReportValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VictimServices.VictimServicesAttendanceValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccompanimentMinutes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumTransportProvided)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferToNurse)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BadDate.BadDateReportValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityAssault.CityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityResidence.CityResName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrugAssault.DrugFacilitatedAssaultValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evidence.EvidenceStoredValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exploitation.SexWorkExploitationValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HIVMeds.HIVMedsValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HospitalAttended.HospitalAttName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicalOnly.MedicalOnlyValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MultiPerp.MultiplePerpetratorValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliceAttendence.PoliceAttendanceValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliceReported.PoliceReportedValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferCBVS.ReferCBVSValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferringHospital.HospitalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SocialWorkAttendence.SocialWorkAttendanceValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThirdParty.ThirdPartyReportValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VictimServices.VictimServicesAttendanceValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccompanimentMinutes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumTransportProvided)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferToNurse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SmartId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SmartId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SmartId })
+        </td>
+    </tr>
+}
+
+</table>

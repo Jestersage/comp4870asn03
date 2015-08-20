@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Client.RepeatClient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RepeatClient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Repeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repeat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RepeatClientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "DisableUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="spacerBody">
+    <p>&nbsp;</p>
+    @Html.ActionLink("Roles", "RoleIndex")
+    <h2>Disable User</h2>
+
+    @using (Html.BeginForm("DisableUser", "Role"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+
+        <p>
+            Username :<span style="color: #000000"> @Html.DropDownList("UserName", ViewBag.EnabledUsers as SelectList)</span>
+            <input type="submit" value="Disable" />
+        </p>
+    }
+
+    <h2>Enable User</h2>
+
+    @using (Html.BeginForm("EnableUser", "Role"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <p>
+            Username :<span style="color: #000000"> @Html.DropDownList("UserName", ViewBag.DisabledUsers as SelectList)</span>
+            <input type="submit" value="Enable" />
+        </p>
+        <hr />
+        <div class="message-success" style="color: #ff2f00">@ViewBag.ResultMessage</div>
+    }
+</div>

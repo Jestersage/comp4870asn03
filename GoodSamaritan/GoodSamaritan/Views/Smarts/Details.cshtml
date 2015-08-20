@@ -1,0 +1,186 @@
+﻿@model GoodSamaritan.Models.Smart.Smart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Smart</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BadDate.BadDateReportValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadDate.BadDateReportValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityAssault.CityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityAssault.CityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityResidence.CityResName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityResidence.CityResName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrugAssault.DrugFacilitatedAssaultValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrugAssault.DrugFacilitatedAssaultValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evidence.EvidenceStoredValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evidence.EvidenceStoredValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exploitation.SexWorkExploitationValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exploitation.SexWorkExploitationValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIVMeds.HIVMedsValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIVMeds.HIVMedsValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HospitalAttended.HospitalAttName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HospitalAttended.HospitalAttName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalOnly.MedicalOnlyValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalOnly.MedicalOnlyValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultiPerp.MultiplePerpetratorValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultiPerp.MultiplePerpetratorValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceAttendence.PoliceAttendanceValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceAttendence.PoliceAttendanceValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceReported.PoliceReportedValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceReported.PoliceReportedValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferCBVS.ReferCBVSValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferCBVS.ReferCBVSValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferringHospital.HospitalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferringHospital.HospitalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialWorkAttendence.SocialWorkAttendanceValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocialWorkAttendence.SocialWorkAttendanceValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdParty.ThirdPartyReportValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdParty.ThirdPartyReportValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VictimServices.VictimServicesAttendanceValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VictimServices.VictimServicesAttendanceValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccompanimentMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccompanimentMinutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumTransportProvided)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumTransportProvided)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferToNurse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferToNurse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SmartId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

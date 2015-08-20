@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Smart.ThirdPartyReport
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThirdPartyReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdPartyReportValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdPartyReportValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThirdPartyReportId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

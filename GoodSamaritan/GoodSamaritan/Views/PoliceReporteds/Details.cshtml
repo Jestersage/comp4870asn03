@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Smart.PoliceReported
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PoliceReported</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceReportedValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceReportedValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PoliceReportedId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

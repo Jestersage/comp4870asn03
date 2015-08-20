@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Client.ReferralContact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReferralContact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferralContactName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReferralContactId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

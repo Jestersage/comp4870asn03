@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Client.FileStatus
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FileStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileStatusString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileStatusString)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FileStatusId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

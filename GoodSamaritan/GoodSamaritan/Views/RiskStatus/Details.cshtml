@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Client.RiskStatus
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RiskStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskStatusValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskStatusValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RiskStatusId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

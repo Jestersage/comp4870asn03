@@ -1,0 +1,304 @@
+﻿@model GoodSamaritan.Models.Client.Client
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.age.AgeRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age.AgeRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedWorker.AssignedWorkerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignedWorker.AssignedWorkerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crisis.CrisisName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crisis.CrisisName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DuplicateFile.IsDuplicate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DuplicateFile.IsDuplicate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.File.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.File.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileStatuse.FileStatusString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileStatuse.FileStatusString)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiscalYear.FiscalYearName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiscalYear.FiscalYearName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident.IncidentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident.IncidentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Program.ProgramName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Program.ProgramName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race.Ethnictiy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race.Ethnictiy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralContact.ReferralContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferralContact.ReferralContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralSource.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferralSource.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relationship.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relationship.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatClient.Repeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatClient.Repeat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskLevel.RiskLevelValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskLevel.RiskLevelValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskStatus.RiskStatusValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskStatus.RiskStatusValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serivce.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serivce.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VictimOfIncident.VictimType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VictimOfIncident.VictimType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceFileNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceFileNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourtFileNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourtFileNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SWCFileNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SWCFileNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskAccessmentAssignedTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskAccessmentAssignedTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbuserSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbuserSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbuserFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbuserFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumChildrenAgeZeroSix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumChildrenAgeZeroSix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumChildrenAgeSevenTweleve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumChildrenAgeSevenTweleve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumChildrenAgeTeens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumChildrenAgeTeens)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLastTransfer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateLastTransfer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateClosed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateClosed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateReopened)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReopened)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

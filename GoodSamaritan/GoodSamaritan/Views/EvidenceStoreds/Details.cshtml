@@ -1,0 +1,26 @@
+﻿@model GoodSamaritan.Models.Smart.EvidenceStored
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EvidenceStored</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EvidenceStoredValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvidenceStoredValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EvidenceStoredId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

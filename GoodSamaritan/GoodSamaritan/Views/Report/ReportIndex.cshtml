@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.Title = "Worker Summary and Detail Report";
+
+}
+
+
+<div class="spacerBody">
+
+    <h3>Worker Summary and Detail Report</h3>
+    <hr />
+
+    @using (Html.BeginForm("ReportIndex", "Report"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <table>
+            <tr>
+                <td>Date and Time :</td>
+                <td>@DateTime.Now </td>
+            </tr>
+
+            <tr>
+
+                <td> <p>&nbsp;</p>Assigned Worker : </td>
+                <td><p>&nbsp;</p><span style="color: #000000"> @Html.DropDownList("AssignedWorkerName", ViewBag.AssignedWorkers as SelectList)</span> </td>
+            </tr>
+            <tr>
+                <td>File Status :</td>
+                <td><span style="color: #000000"> @Html.DropDownList("FileStatusString", ViewBag.FileStatus as SelectList)</span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="View Report" /></td>
+            </tr>
+        </table>
+
+    }
+    @using (Html.BeginForm("ReportIdex", "Report"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <h3>Summary:</h3>
+        <table style="border-style:double; border-color:white">
+            <tr>
+                <th style="border-style:double; border-color:white">Total Assigned in Selected Status</th>
+                <th style="border-style:double; border-color:white">Total Assignment</th>
+                <th style="border-style:double; border-color:white">Open Files for Worker</th>
+                <th style="border-style:double; border-color:white">Closed Files for Worker</th>
+                <th style="border-style:double; border-color:white">Reopened Files for Worker</th>
+                <th style="border-style:double; border-color:white">Status None</th>
+            </tr>
+            <tr>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.AssignedInSelectedStatus</td>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.TotalAssinged</td>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.Open</td>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.Closed</td>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.Reopened</td>
+                <td style="border-style:double; border-color:white; text-align:center">@ViewBag.None</td>
+            </tr>
+        </table>
+        <hr />
+        <h3>Details for Selected Status:</h3>
+
+        if (ViewBag.ClientId != null)
+        {
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Clients Reference Number</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.ClientId); i++)
+                {
+                    <tr>
+                        <td style="text-align:center">@Html.Raw(ViewBag.ClientId[i])</td>
+                    </tr>
+                }
+            </table>
+
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Fiscal Year</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.FiscalYearName); i++)
+                {
+                    <tr>
+                        <td style="text-align:center">@ViewBag.FiscalYearName[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Month</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Month); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.Month[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Day</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Day); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.Day[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Program</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.ProgramName); i++)
+                {
+                    <tr>
+                        <td> @ViewBag.ProgramName[i] </td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Surname</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Surname); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.Surname[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">First Name</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.FirstName); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.FirstName[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Police File No.</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.PoliceFileNum); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.PoliceFileNum[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Court File No</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.CourtFileNum); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.CourtFileNum[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Service</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.ServiceName); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.ServiceName[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Victim of Incident</th>
+                </tr>
+
+                @for (int i = 0; i < Enumerable.Count(ViewBag.VictimType); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.VictimType[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Family Violence File</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Status); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.Status[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Gender</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Gender); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.Gender[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Ethnicity</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.Ethnictiy); i++)
+                {
+                    <tr>
+                        <td> @ViewBag.Ethnictiy[i]</td>
+                    </tr>
+                }
+            </table>
+            <table style="float: left; border-style:double; border-color:white">
+                <tr>
+                    <th style="border-style:double; border-color:white">Age</th>
+                </tr>
+                @for (int i = 0; i < Enumerable.Count(ViewBag.AgeRange); i++)
+                {
+                    <tr>
+                        <td>@ViewBag.AgeRange[i]</td>
+                    </tr>
+                }
+            </table>
+        }
+   
+    }
+</div>

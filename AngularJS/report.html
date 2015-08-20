@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body data-ng-controller="ClientController">
+    <h1>{{ message }}</h1>
+    <div>{{ error }}</div>
+
+    <div>
+
+        <form name="frmSearchUser" data-ng-submit="workerSearch(username)">
+            <!-- input type="search" placeholder="Username to find"
+              data-ng-model="username" required /-->
+            Report for assigned worker:
+            <select data-ng-model="worker">
+                <option value="None">None</option>
+                <option value="Michelle">Michelle</option>
+                <option value="Tyra">Tyra</option>
+                <option value="Louise">Louise</option>
+                <option value="Angela">Angela</option>
+                <option value="Dave">Dave</option>
+                <option value="Troy">Troy</option>
+                <option value="Michael">Michael</option>
+                <option value="Manpreet">Manpreet</option>
+                <option value="Patrick">Patrick</option>
+            </select>
+            <input type="submit" value="Search" />
+        </form>
+
+        <form name="frmSearchFile" data-ng-submit="fileSearch(username)">
+            <!-- input type="search" placeholder="Username to find"
+              data-ng-model="username" required /-->
+            File
+            <select data-ng-model="fileStatus">
+                <option value="reopened">reopened</option>
+                <option value="opened">opened</option>
+                <option value="closed">closed</option>
+
+            </select>
+            <input type="submit" value="Search" />
+        </form>
+
+
+    </div>
+
+    <div>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" title="ClientID">Clients Reference Number</th>
+                    <th scope="col" title="FiscalYear">Fiscal Year</th>
+                    <th scope="col" title="Month">Month</th>
+                    <th scope="col" title="Day">Day</th>
+                    <th scope="col" title="Program">Program</th>
+                    <th scope="col" title="Surname">Surname</th>
+                    <th scope="col" title="FirstName">First Name</th>
+                    <th scope="col" title="PoliceFileId">Police File No.</th>
+                    <th scope="col" title="CourtFileId">Court File No.</th>
+                    <th scope="col" title="Service">Service</th>
+                    <th scope="col" title="Victim">Victim of Incident</th>
+                    <th scope="col" title="File">Family Violence File</th>
+                    <th scope="col" title="Gender">Gender</th>
+                    <th scope="col" title="Ethnicity">Ethnicity</th>
+                    <th scope="col" title="Age">Age</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="x in user">
+                <tr>
+                    <td>{{x.$id}}</td>
+                    <td>{{x.FiscalYear.FiscalYearName}}</td>
+                    <td>{{x.Month}}</td>
+                    <td>{{x.Day}}</td>
+                    <td>{{x.Program.ProgramName}}</td>
+
+                    <td>{{x.Surname}}</td>
+                    <td>{{x.FirstName}}</td>
+                    <td>{{x.PoliceFileNum}}</td>
+                    <td>{{x.CourtFileNum}}</td>
+                    <td>{{x.Service.ServiceName}}</td>
+                    <td>{{x.VictimOfIncident.VictimType}}</td>
+                    <td>{{x.File.Status}}</td>
+                    <td>{{x.Gender}}</td>
+                    <td>{{x.Race.Ethnictiy}}</td>
+                    <td>{{x.age.AgeRange}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\bin\ConsumptionClient.dll.config
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\bin\ConsumptionClient.dll
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\bin\ConsumptionClient.pdb
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\obj\Debug\ConsumptionClient.csprojResolveAssemblyReference.cache
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\obj\Debug\ConsumptionClient.dll
+C:\Users\omeed\Desktop\Assignment3\comp4870asn02-master\GoodSamaritan\ConsumptionClient\obj\Debug\ConsumptionClient.pdb
